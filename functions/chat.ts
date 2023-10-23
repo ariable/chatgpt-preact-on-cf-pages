@@ -50,7 +50,7 @@ export const onRequest: PagesFunction<Env> = async ({ env, request }) => {
   // Call OpenAI API
   // Note that the official OpenAI library is not yet compatible with
   // Cloudflare Workers due to the internal use of Axios (https://github.com/openai/openai-node/issues/30).
-  const data: any = await fetch("https://api.openai.com/v1/chat/completions", {
+  const data: any = await fetch("https://gpt.wf/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
